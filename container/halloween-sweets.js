@@ -9,7 +9,6 @@ function pick(bags, scale) {
       return bags[1];
     }
   }
-
   const groupOne = bags.slice(0, 3);
   const groupTwo = bags.slice(3, 6);
   const groupThree = bags.slice(6);
@@ -18,10 +17,8 @@ function pick(bags, scale) {
   if (result === 0) {
     return pick(groupThree, scale);
   } else if (result === -1) {
-    return pick(groupONe, scale);
+    return pick(groupOne, scale);
   } else {
     return pick(groupTwo, scale);
   }
-
-  return bags;
 }
