@@ -558,28 +558,64 @@ console.log(output); // --> ['d', 'e']
 /*  Write a function called "getElementsUpTo".
 Given an array and a index, "getElementsUpTo", returns an array with all the elements up until, but not including, the element at the given index.
 Notes:* In order to do this you should be familiar with the 'splice' method.
-
 */
+function getElementsUpTo(arr, n) {
+  return arr.slice(0, n);
+}
+const output = getElementsUpTo(["a", "b", "c", "d", "e"], 3);
+console.log(output); // --> ['a', 'b', 'c']
 // =======================================================================
 
 //  39  =======================================================================
-/* 
+/* Write a function called "getAllElementsButFirst".
+Given an array, "getAllElementsButFirst" returns an array with all the elements but the first.
 */
+const input = [1, 2, 3, 4];
+function getAllElementsButFirst(array) {
+  // your code here
+  return array.splice(1);
+}
+const output = getAllElementsButFirst(input);
+console.log(output); // --> [2, 3, 4]
 // =======================================================================
 
 //  40  =======================================================================
-/* 
+/* Write a function called "getAllElementsButLast".
+Given an array, "getAllElementsButLast" returns an array with all the elements but the last.
 */
+const input = [1, 2, 3, 4];
+function getAllElementsButLast(array) {
+  return array.splice(0, array.length - 1);
+}
+const output = getAllElementsButLast(input);
+console.log(output); // --> [1, 2 , 3]
 // =======================================================================
 
 //  41  =======================================================================
-/* 
+/* Write a function called "removeFromFront".
+Given an array, "removeFromFront" returns the given array with its first element removed.
+Notes:* You should be familiar with the method 'shift'.
 */
+function removeFromFront(arr) {
+  arr.shift(); //modifies array
+  return arr; //return new array
+}
+const output = removeFromFront([1, 2, 3]);
+console.log(output); // --> [2, 3]
 // =======================================================================
 
 //  42  =======================================================================
-/* 
+/*  Write a function called "removeFromBackOfNew".
+Given an array, "removeFromBackOfNew" returns a new array containing all but the last element of the given array.
+Notes:* You should be familiar with the 'slice' method.
 */
+const arr = [1, 2, 3];
+function removeFromBackOfNew(arr) {
+  return arr.slice(1);
+}
+const output = removeFromBackOfNew(arr);
+console.log(output); // --> [1, 2]
+console.log(arr); // --> [1, 2, 3]
 // =======================================================================
 
 //  43  =======================================================================
