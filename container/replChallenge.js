@@ -619,43 +619,145 @@ console.log(arr); // --> [1, 2, 3]
 // =======================================================================
 
 //  43  =======================================================================
-/* 
+/* Write a function called "removeFromFrontOfNew".
+Given an array, "removeFromFrontOfNew" returns a new array containing all but the first element of the given array.
+Notes:* You should be familiar with the 'slice' method.
 */
+const arr = [1, 2, 3];
+//1 solution
+function removeFromFrontOfNew(arr) {
+  return arr.slice(1, 3);
+}
+const output = removeFromFrontOfNew(arr);
+console.log(output); // --> [2, 3]
+console.log(arr); // --> [1, 2, 3]
+
+// 2
+function removeFromFrontOfNew(arr) {
+  // your code here
+  var newArr = arr.slice(arr[0], arr.legth);
+  return newArr;
+}
+var output = removeFromFrontOfNew([1, 2, 3]);
+console.log(output);
+
+//3
+function removeFromFrontOfNewWithLoop(arr) {
+  var newArray = [];
+
+  for (var i = 1; i < arr.length; i++) {
+    newArray.push(arr[i]);
+  }
+  return newArray;
+}
+var output = removeFromFrontOfNewWithLoop([1, 2, 3]);
+console.log(output);
 // =======================================================================
 
 //  44  =======================================================================
-/* 
+/* Write a function called "countCharacter".
+Given a string input and a character, "countCharacter" returns the number of occurences of a given character in the given string.
 */
+function countCharacter(string, character) {
+  let characterCounter = 0;
+  for (i = 0; i < string.length; i++) {
+    if (string[i] === character) {
+      characterCounter += 1;
+    }
+  }
+  return characterCounter;
+}
+
+var output = countCharacter("I am a hacker", "a");
+console.log(output);
 // =======================================================================
 
 //  45  =======================================================================
-/* 
+/* Write a function called "getAllLetters".
+Given a word, "getAllLetters" returns an array containing every character in the word. 
+Notes:* If given an empty string, it should return an empty array.
 */
+
+function getAllLetters(str) {
+  // your code here
+  return str.split("");
+}
+var output = getAllLetters("Radagast");
+console.log(output); // --> ['R', 'a', 'd', 'a', 'g', 'a', 's', 't']
 // =======================================================================
 
 //  46  =======================================================================
-/* 
+/* Write a function called "getAllWords".
+Given a sentence, "getAllWords" returns an array containing every word in the sentence. 
+Notes:* If given an empty string, it should return an empty array.
 */
+function getAllWords(str) {
+  return str.split(" ");
+}
+const output = getAllWords("Radagast the Brown");
+console.log(output); // --> ['Radagast', 'the', 'Brown']
 // =======================================================================
 
 //  47  =======================================================================
-/* 
+/*  Write a function called "removeFromBack".
+Given an array, "removeFromBack" returns the given array with its last element removed.
+Notes:* You should be familiar with the method 'pop'.
 */
+
+function removeFromBack(arr) {
+  arr.pop();
+  return arr;
+}
+const output = removeFromBack([1, 2, 3]);
+console.log(output); // --> [1, 2]
 // =======================================================================
 
 //  48  =======================================================================
-/* 
+/*  Write a function called "or".
+Given 2 boolean expressions, "or" returns true or false, corresponding to the || operator.
+Notes:* Do not use the || operator.* Use ! and && operators instead.
 */
+function or(expression1, expression2) {
+  if (!expression1 && !expression2) return false;
+  return true;
+}
+const output = or(true, true);
+console.log(output); // --> true
 // =======================================================================
 
 //  49  =======================================================================
-/* 
+/* Write a function called "isEitherEvenOrAreBoth7".
+Given two numbers, "isEitherEvenOrAreBoth7" returns whether at least one of them is even, or, both of them are 7
 */
+function isEitherEvenOrAreBoth7(num1, num2) {
+  if (num1 % 2 === 0 || num2 % 2 === 0 || (num1 === 7 && num2 === 7)) {
+    return true;
+  } else {
+    return false;
+  }
+  // returns whether at least one of them is even, or, both of them are 7.
+}
+var output = isEitherEvenOrAreBoth7(3, 7);
+console.log(output); // --> false
+
+var output = isEitherEvenOrAreBoth7(2, 3);
+console.log(output); // --> true
 // =======================================================================
 
 //  50  =======================================================================
-/* 
+/*  Write a function called "isEitherEvenAndLessThan9".
+Given two numbers, 'isEitherEvenAndLessThan9' returns whether at least one of them is even, and, both of them are less than 9.
 */
+function isEitherEvenAndLessThan9(num1, num2) {
+  if ((num1 % 2 === 0 || num2 % 2 === 0) && (num1 < 9 && num2 < 9)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+const output = isEitherEvenAndLessThan9(2, 4);
+console.log(output); // --> true
+
 // =======================================================================
 
 //  51  =======================================================================
