@@ -761,8 +761,33 @@ console.log(output); // --> true
 // =======================================================================
 
 //  51  =======================================================================
-/* 
+/* Write a funciton called "extend"
+Given two objects, "extend" adds properties from the 2nd object to the 1st object.
+Notes: Add any keys that are not in the 1st object.
+*If the 1st object already has a given key, ignore it ( do not overwrite the property value ) . 
+Do not modify the 2nd object at all .
 */
+function extend(obj1, obj2) {
+  // adds properties from the 2nd object to the 1st object
+  for (var key in obj2) {
+    //console.log(key); // obj2 keys: b c
+    //console.log(obj1[key]); // obj1 values: 2 undefined
+    //console.log(obj2[key]); // obj2 values: 4 3
+
+    //if (obj1.hasOwnProperty(key)) { //this works too
+    if (obj1[key]) {
+      obj1[key];
+    } else {
+      obj1[key] = obj2[key];
+    }
+  }
+  return obj1;
+}
+
+extend(obj1, obj2);
+
+console.log(obj1); // --> {a: 1, b: 2, c: 3}
+console.log(obj2); // --> {b: 4, c: 3}
 // =======================================================================
 
 //  52  =======================================================================
