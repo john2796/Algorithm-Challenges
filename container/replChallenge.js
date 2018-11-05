@@ -522,20 +522,43 @@ console.log(output); // ---> 22
 /* Write a function called "getLengthOfThreeWords".
 Given 3 words, "getLengthOfThreeWords" returns the sum of their lengths.
 */
+function getLengthOfThreeWords(word1, word2, word3) {
+  // your code here
+  return word1.length + word2.length + word3.length;
+}
+const output = getLengthOfThreeWords("some", "other", "words");
+console.log(output); // --> 14
 // =======================================================================
 
 //  36  =======================================================================
-/* 
+/* Write a function called "joinArrays".
+Given two arrays, "joinArrays" returns an array with the elements of "arr1" in order, followed by the elements in "arr2". 
+You should be familiar with the "concat" method for this problem. 
 */
+function joinArrays(arr1, arr2) {
+  // your code here
+  return arr1.concat(arr2);
+}
+const output = joinArrays([1, 2], [3, 4]);
+console.log(output); // --> [1, 2, 3, 4]
 // =======================================================================
 
 //  37  =======================================================================
-/* 
+/* Write a function called "getElementsAfter".
+Given an array and an index, "getElementsAfter" returns a new array with all the elements after (but not including) the given index.
 */
+function getElementsAfter(arr, n) {
+  return arr.splice(n + 1);
+}
+const output = getElementsAfter(["a", "b", "c", "d", "e"], 1);
+console.log(output); // --> ['d', 'e']
 // =======================================================================
 
 //  38  =======================================================================
-/* 
+/*  Write a function called "getElementsUpTo".
+Given an array and a index, "getElementsUpTo", returns an array with all the elements up until, but not including, the element at the given index.
+Notes:* In order to do this you should be familiar with the 'splice' method.
+
 */
 // =======================================================================
 
