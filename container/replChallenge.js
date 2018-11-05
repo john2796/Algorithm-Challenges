@@ -208,13 +208,13 @@ console.log(output); // ---> true
 //  10  =======================================================================
 /* Write a function called "average".
 Given two numbers, "average" returns their average
+*/
 
 function average(num1, num2) {
   return (num1 + num2) / 2;
 }
 const output = average(4,6);
 console.log(output); //--> 5
-*/
 // =======================================================================
 
 
@@ -229,6 +229,7 @@ console.log(output); //--> 5
 //  11  =======================================================================
 /* Write a function called "computeAreaOfATriangle"
 Given the base  and heigh of a triangle, "computeAreaOfTriangle" returns its area
+*/
 
 function computeAreaOfATriangle(base, height) {
  return (base * height) / 2;
@@ -236,7 +237,6 @@ function computeAreaOfATriangle(base, height) {
 
 const output = computeAreaOfATriangle(4,6);
 console.log(output); // ---> 12
-*/
 // =======================================================================
 
 
@@ -251,13 +251,13 @@ console.log(output); // ---> 12
 //  12  =======================================================================
 /* Write a function called "computePerimeterOfARectangle"
 Given a length and a width describing a reactablge, 'computePerimeterOfARectangle' returns its perimter.
+*/
 
 function computePerimeterOfARectangle(length, width) {
   return (length * 2) + (width * 2);
 }
 const output = computePerimeterOfARectangle(5,2);
 console.log(output); // ---> 14
-*/
 // =======================================================================
 
 
@@ -272,13 +272,13 @@ console.log(output); // ---> 14
 //  13  =======================================================================
 /*  Write a function called "cube".
 Given a number, "cube" returns the cube of the number .
+*/
 
 function cube(num) {
     return Math.pow(num, 3);
 }
 var output = cube(4);
 console.log(output); // ---> 27
-*/
 // =======================================================================
 
 
@@ -293,6 +293,7 @@ console.log(output); // ---> 27
 //  14  =======================================================================
 /* Write a function called "square"
 Given a number , "square" should return the square of the given number.
+*/
 
 function square(num) {
   return Math.pow(num, 2)
@@ -300,7 +301,6 @@ function square(num) {
 
 const output = square(5);
 console.log(output); // ---> 25
-*/
 // =======================================================================
 
 
@@ -315,6 +315,7 @@ console.log(output); // ---> 25
 //  15  =======================================================================
 /* Write a function called "computeAverageLengthOfWords".
 Given two words, "computeAverageLengthOfWords" returns the average of their length.
+*/
 
 function computeAverageLengthOfWords(word1, word2) {
   return (word1.length + word2.length) / 2;
@@ -322,7 +323,6 @@ function computeAverageLengthOfWords(word1, word2) {
 
 var output = computeAverageLengthOfWords('code', 'programs');
 console.log(output); // --> 6
-*/
 // =======================================================================
 
 
@@ -337,6 +337,7 @@ console.log(output); // --> 6
 //  16  =======================================================================
 /* Write a function called "addFullNameProperty"
 Given an object that has a 'FirstName" property and a 'lastName" property , 'addFullNameProperty" returns a 'FullName' property whose value is a string with the first name and separated by a space.
+*/
 
 function addFullNameProperty(obj) {
   var fullName = obj.firstName + ' ' + obj.lastName;
@@ -352,7 +353,6 @@ var person = {
 addFullNameProperty(person);
 console.log(person.fullName);
 
-*/
 // =======================================================================
 
 
@@ -367,6 +367,7 @@ console.log(person.fullName);
 //  17  =======================================================================
 /* Write a function called "addObjectProperty"
 Given two objects and a key. " addObjctProperty" sets a new property on the 1st object at the given key. The value of that new property is the entire 2nd object.
+*/
 
 const person1 = {
   name: 'Joe Blow',
@@ -385,7 +386,6 @@ function addObjectProperty(obj1, key, obj2) {
 addObjectProperty(person1, 'manager', person2);
 console.log(person1.manager); // --> { name: 'Mr. Burns', role: 'supervisor' }
 
-*/
 // =======================================================================
 
 
@@ -401,6 +401,7 @@ console.log(person1.manager); // --> { name: 'Mr. Burns', role: 'supervisor' }
 /* Write a function called "isPersonOldEnoughToDrinkAndDrive"
 Given a "person" object, that contains an "age" property, "isPersonOldEngoughToDrink" returns whether the given perosn is old enough to legally drink and drive in the United States
 Note : The legal drinking age in the United States is 21. The legal driving age in the United States is 16. It is always illegal to drink and drive in the United States.
+*/
 
 const obj = {
   age: 45
@@ -413,7 +414,6 @@ const output = isPersonOldEnoughToDrinkAndDrive(obj);
 console.log(output); // false
 
 obj.age
-*/
 // =======================================================================
 
 
@@ -429,6 +429,7 @@ obj.age
 /* Write a function called "isPersonOldEnoughToDrive"
 Given a "person" object, that contains an "age" property, "isPersonOldEnoughtToDrive" returns whether the given person is old enough to drive.
 Notes: The legal driving age in the United States is 16.
+*/
 const obj = {
   age: 16
 }
@@ -437,7 +438,6 @@ function isPersonOldEnoughToDrive(person) {
 }
 const output = isPersonOldEnoughToDrive(obj);
 console.log(output); // --> true
-*/
 // =======================================================================
 
 
@@ -452,6 +452,7 @@ console.log(output); // --> true
 //  20  =======================================================================
 /*  Write a funciton  called "addArrayProperty" 
 Given an object, a key , and an array, "addArrayProperty" sets a new property on the object at the given key, with its value set to the given array.
+*/
 
 const myArray = [1,3];
 
@@ -461,7 +462,6 @@ function addArrayProperty(obj, key, arr) {
 }
 addArrayProperty(myObj, 'myProperty', myArray);
 console.log(myObj.myProperty); // --> [1, 3]
-*/
 // =======================================================================
 
 
@@ -477,13 +477,13 @@ console.log(myObj.myProperty); // --> [1, 3]
 /* Write a function called "getNthElement".
 Given an array and an integer, "getNthElement" returns the element at the given integer, within the given array.
 Notes : If the array has a length of 0, it should return 'undefiened'
+*/
 
 function getNthElement(array, n) {
   return array[n];
 }
 var output = getNthElement([1,2,3],1);
 console.log(output);
-*/
 // =======================================================================
 
 
@@ -499,13 +499,13 @@ console.log(output);
 /* Write a funciton called "getsFirstElmenet".
 Given an array, "getFirstElment" returns the first element of the given array. 
 Notes: If the given array has a length of 0, it should return undefined.
+*/
 
 function getFirstElement(array) {
   return array[0];
 }
 const output = getFirstElement([1, 2, 3, 4, 5]);
 console.log(output); // --> 1
-*/
 // =======================================================================
 
 
@@ -521,6 +521,7 @@ console.log(output); // --> 1
 /* Write a function called "getLastElement" 
 Given an array, "getLastElement" returns the last element of the given array. 
 Note: If the given array has a length of 0, it should return 'udefined'
+*/
 
 function getLastElement(array) {
   return array[array.length-1]; //this means: array[index[4]] as the length of the array is 5. 
@@ -528,7 +529,6 @@ function getLastElement(array) {
 }
 const output = getLastElement([1, 2, 3, 4]);
 console.log(output); // --> 4
-*/
 // =======================================================================
 
 
@@ -544,6 +544,7 @@ console.log(output); // --> 4
 /*  Write a function called "addToFront".
 Given an array and an element, "addToFront" adds the given element to the front of the given array, and returns the given array.
 Note: It should be the SAME array, not a new array.
+*/
 
 function addToFront(arr, element) {
   arr.unshift(element);
@@ -551,7 +552,6 @@ function addToFront(arr, element) {
 }
 var output = addToFront([2,3,4,5],1);
 console.log(output);
-*/
 // =======================================================================
 
 
@@ -566,6 +566,7 @@ console.log(output);
 //  25  =======================================================================
 /* Write a function called "addToBack".
 Given an array and an element, "addToback" returns the given array with the givent element added to the end.
+*/
 
 function addToBack(arr, element) {
   arr.push(element);
@@ -573,7 +574,6 @@ function addToBack(arr, element) {
 }
 const output = addToBack([1, 2], 3);
 console.log(output); // -> [1, 2, 3]
-*/
 // =======================================================================
 
 
@@ -588,6 +588,7 @@ console.log(output); // -> [1, 2, 3]
 //  26  =======================================================================
 /*  Write a function called "computeAreaOfARectangle".
   Given the length and width of a rectangle, "computeAreaOfAReactangle" returns its area.
+  */
 
   function computeAreaOfARectangle(length, width) {
   return length * width;
@@ -595,7 +596,6 @@ console.log(output); // -> [1, 2, 3]
 
 const output = computeAreaOfARectangle(4, 8);
 console.log(output); // --> 32
-*/
 // =======================================================================
 
 
@@ -610,6 +610,7 @@ console.log(output); // --> 32
 //  27  =======================================================================
 /* Write a function called "computePerimeterOfARectangle".
 Given a length and a width describing a rectangle, "computePerimeterOfARectangle" returns its perimter.
+*/
 
 function computePerimeterOfARectangle(length, width) {
   return (length*2) + (width*2);
@@ -617,7 +618,6 @@ function computePerimeterOfARectangle(length, width) {
 
 const output = computePerimeterOfARectangle(5, 2);
 console.log(output); // --> 14
-*/
 // =======================================================================
 
 
@@ -632,6 +632,7 @@ console.log(output); // --> 14
 //  28  =======================================================================
 /*  Write a function called "computePerimeterOfATriangle".
 Given 3 sides describing a triangle, "computePerimeterOfATriangle" returns its perimter.
+*/
 
 function computePerimeterOfATriangle(side1, side2, side3) {
   return side1 + side2 + side3;
@@ -639,7 +640,6 @@ function computePerimeterOfATriangle(side1, side2, side3) {
 
 const output = computePerimeterOfATriangle(6, 4, 10);
 console.log(output); // --> 20
-*/
 // =======================================================================
 
 
@@ -654,6 +654,7 @@ console.log(output); // --> 20
 //  29  =======================================================================
 /* Write a function called "computeTripledAreaOfARectangle".
 Given a length and width of a rectangle, "computeTripledAreaOfARectangle" returns the rectangle's area, multiplied by 3.
+*/
 
 function computeTripledAreaOfARectangle(length, width) {
   return length * width * 3;
@@ -662,7 +663,6 @@ const output = computeTripledAreaOfARectangle(2,4);
 console.log(output);
 
 
-*/
 // =======================================================================
 
 
@@ -678,13 +678,13 @@ console.log(output);
 /* 
 Write a function called "computePerimeterOfACircle".
 Given the radius of a circle, "computePerimeterOfACircle" returns its perimeter.
+*/
 
 function computePerimeterOfACircle(radius) {
   return 2 * Math.PI * radius;
 }
 const output = computePerimeterOfACircle(4);
 console.log(output);
-*/
 // =======================================================================
 
 
@@ -699,15 +699,13 @@ console.log(output);
 //  31  =======================================================================
 /*  Write a function called "computeAreaOfACircle".
 Given the radius of a circle, "computeAreaOfACircle" returns its area.
+*/
 
 function computeAreaOfACircle(radius) {
     return Math.PI * radius * radius;
-
 }
-
 const output = computeAreaOfACircle(4);
 console.log(output); // --> 50.26548245743669
-*/
 // =======================================================================
 
 
