@@ -791,8 +791,19 @@ console.log(obj2); // --> {b: 4, c: 3}
 // =======================================================================
 
 //  52  =======================================================================
-/* 
+/* LongestString Challenge 
+Write a function that takes an array of strings and return the longest string in the array 
+
 */
+function longestString(arr) {
+  const longest = arr.reduce(function(a, b) {
+    return a.length >= b.length ? a : b;
+  });
+  //return_the_first_if_there_are_two_longest_strings
+  return longest;
+}
+const strings1 = ["short", "really, really long!", "medium"];
+console.log(longestString(strings1)); // <--- 'really, really long!'
 // =======================================================================
 
 //  53  =======================================================================
