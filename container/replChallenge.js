@@ -916,38 +916,176 @@ console.log(output); // --> 3
 // =======================================================================
 
 //  58  =======================================================================
-/*
+/*Write a funciton called "removeOddValues"
+Given an object, "removeOddValues" removes any properties whose values are odd numbers.
  */
+const obj = {
+  a: 2,
+  b: 3,
+  c: 4
+};
+function removeOddValues(obj) {
+  for (let key in obj) {
+    if (obj[key] % 3 === 0) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeOddValues(obj);
+console.log(obj); // --> { a: 2, c: 4 }
 // =======================================================================
 
 //  59  =======================================================================
-/*
+/*Write a function called "removeArrayValues".
+Given an object, "removeArrayValues" removes any properties whose values are arrays.
  */
+
+const obj = {
+  a: [1, 3, 4],
+  b: 2,
+  c: ["hi", "there"]
+};
+function removeArrayValues(obj) {
+  for (let key in obj) {
+    if (Array.isArray(obj[key])) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeArrayValues(obj);
+console.log(obj); // --> { b: 2 }
 // =======================================================================
 
 //  60  =======================================================================
-/*
+/* Write a function called "removeNumberValues".
+Given an object, "removeNumberValues" removes any properties whose values are numbers.
  */
+//answer 1
+const obj = {
+  a: 2,
+  b: "remaining",
+  c: 4
+};
+function removeNumberValues(obj) {
+  for (let key in obj) {
+    if (Number.isInteger(obj[key])) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeNumberValues(obj);
+console.log(obj); // --> { b: 'remaining' }
+//answer 2
+const obj = {
+  a: 2,
+  b: "remaining",
+  c: 4
+};
+function removeNumberValues(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === "number") {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeNumberValues(obj);
+console.log(obj); // --> { b: 'remaining' }
 // =======================================================================
 
 //  61  =======================================================================
-/*
+/* Write a function called "removeStringValues"
+Given an object, "removeStringValues" removes any properties on the given object whose values are string
  */
+var obj = {
+  name: "Sam",
+  age: 20
+};
+function removeStringValues(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === "string") {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeStringValues(obj);
+console.log(obj); // { age: 20 }
 // =======================================================================
 
 //  62  =======================================================================
-/*
+/* Write a function called "convertDoubleSpaceToSingle".
+Given a string, "convertDoubleSpaceToSingle" returns the passed in string, with all the double spaces converted to single spaces. 
  */
+function convertDoubleSpaceToSingle(str) {
+  const singleSpace = str.split("  ");
+  console.log(singleSpace);
+  const newString = singleSpace.join(" ");
+  return newString;
+}
+
+const output = convertDoubleSpaceToSingle("string  with  double  spaces");
+console.log(output); // --> "string with double spaces"
 // =======================================================================
 
 //  63  =======================================================================
-/*
+/*  Write a function called "joinThreeArrays".
+  given three arrays, "joinThreeArrays" returns an array with the elements of "arr1" in order followed by the elments in "arr2" in order followed by the elements of "arr3" in order.
  */
+
+function joinThreeArrays(arr1, arr2, arr3) {
+  return arr1.concat(arr2, arr3);
+}
+
+const output = joinThreeArrays([1, 2], [3, 4], [5, 6]);
+console.log(output); // --> [1, 2, 3, 4, 5, 6]
+
 // =======================================================================
 
 //  64  =======================================================================
-/*
+/*   Write a function called "addToFrontOfNew"
+    Given an array and an element, "addToFrontOfNew" returns a new array containing all the elmeents of the given array, with the given element added to the front.
+    Important: It should be a NEW array instance, not the original array instance.
  */
+// Answer 1
+const input = [1, 2];
+function addToFrontOfNew(arr, element) {
+  const addArray = [];
+  addArray.push(element);
+  for (let i = 0; i < arr.length; i++) {
+    addArray.push(arr[i]);
+  }
+  return addArray;
+}
+
+const output = addToFrontOfNew(input, 3);
+console.log(output); // --> [3, 1, 2];
+console.log(input); // --> [1, 2]
+
+// anwer two
+
+var input = [1, 2];
+
+function addToFrontOfNewWithSplice(arr, element) {
+  //splice modifies array. No need to create a new one.
+  //at these coordinates, add element.
+  //array.splice(start, deleteCount, item1, item2, ...)
+  //array.splice(where to insert, how many to delete if any, element to add)
+  arr.splice(0, 0, element);
+  return arr;
+}
+
+var output = addToFrontOfNewWithSplice(input, 3);
+console.log(output);
+console.log(input);
 // =======================================================================
 
 //  65  =======================================================================
