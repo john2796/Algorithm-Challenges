@@ -852,18 +852,67 @@ console.log(output);
 // =======================================================================
 
 //  55  =======================================================================
-/*
+/*Write a function called 'removeStringValuesLongerThan'.
+Given an number and an object, 'removeStringValuesLongerThan' removes any properties on the given object whose values are strings longer than the given number .
  */
+var obj = {
+  name: "Montana",
+  age: 20,
+  location: "Texas"
+};
+
+function removeStringValuesLongerThan(num, obj) {
+  for (let key in obj) {
+    if (obj[key].length > 6) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeStringValuesLongerThan(6, obj);
+console.log(obj); // { age: 20, location: 'Texas' }
 // =======================================================================
 
 //  56  =======================================================================
-/*
+/*Write a function called "removeEvenValues".
+Given any object, "removeEvenValues" removes any properties whose values are even numbers.
+Do this in place and return the original object, do not construct a cloned object that omits the properties.
  */
+const obj = {
+  a: 2,
+  b: 3,
+  c: 4
+};
+function removeEvenValues(obj) {
+  for (let key in obj) {
+    if (obj[key] % 2 === 0) {
+      delete obj[key];
+    }
+  }
+  return obj;
+}
+
+removeEvenValues(obj);
+console.log(obj); // --> { b: 3 }
 // =======================================================================
 
 //  57  =======================================================================
-/*
+/*Write a function called "countNumberOfKeys"
+Given an object "countNumberOfKeys" returns how many properties the given object has.
  */
+
+var obj = {
+  a: 1,
+  b: 2,
+  c: 3
+};
+function countNumberOfKeys(obj) {
+  return Object.keys(obj).length;
+}
+
+var output = countNumberOfKeys(obj);
+console.log(output); // --> 3
 // =======================================================================
 
 //  58  =======================================================================
