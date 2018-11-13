@@ -1089,8 +1089,24 @@ console.log(input);
 // =======================================================================
 
 //  65  =======================================================================
-/*
+/* Write a function that takes in a string, revereses the 'casing of that string , and returns the "reversed-casing" string.
  */
+function reverseCase(str) {
+  str = str.split("");
+
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      str[i] = str[i].toLowerCase();
+    } else if (str[i] === str[i].toLowerCase()) {
+      str[i] = str[i].toUpperCase();
+    }
+  }
+
+  return str.join("");
+}
+
+reverseCase("HELLO world");
+
 // =======================================================================
 
 //  66  =======================================================================
