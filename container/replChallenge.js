@@ -1110,8 +1110,58 @@ reverseCase("HELLO world");
 // =======================================================================
 
 //  66  =======================================================================
-/*
+/*converts dash-delimited ("kebab" case) & underscore-delimited ("snake" case) words into "camel" casing. The first word within the output should be capitalized only if the original word was capitalized.
  */
+// solution one
+function toCamelCase(str) {
+  // Check if the argument is an empty string.
+  if (str === "") return str;
+  // Defining the first element in the string to use for the loop.
+  let snakeCase = str[0];
+  // Split the string into characters in an array and set it equal to a variable.
+  strArr = str.split("");
+  // Loop through the variable that should be an array now. We start from 1 because we took out the first index --> snakeCase.
+  for (let i = 1; i < strArr.length; i++) {
+    // If the loop stops on a '-' item, set the next item after '-' into an uppercase.
+    if (strArr[i] === "-") {
+      strArr[i + 1] = strArr[i + 1].toUpperCase();
+    }
+    // If the loop stops on a '_' item, set the next item after '_' into an uppercase.
+    else if (strArr[i] === "_") {
+      strArr[i + 1] = strArr[i + 1].toUpperCase();
+    }
+    // After these conditions, add the snakeCase variable (which should have the first index in str) to the modified strArr.
+    else snakeCase += strArr[i];
+  }
+  //After the loop, return the changes.
+  return snakeCase;
+}
+toCamelCase("The_Stealth_Warrior");
+// solution two
+function toCamelCase(str) {
+  // Split string into characters in an array.
+  let arr = str.split("");
+  // Loop through arr array starting from index 1.
+  for (let i = 1; i < arr.length; i++) {
+    // If there is either '-' or '_', turn them to space and send the next item to an uppercase.
+    if (arr[i] === "_" || arr[i] === "-") {
+      arr[i] = "";
+      arr[i + 1] = arr[i + 1].toUpperCase();
+    }
+  }
+  // After the loop, join all of them.
+  return arr.join("");
+}
+// // v3.0 Regular expressions Solution three
+function toCamelCase(str) {
+  const arr = str.split(/[-_]/);
+  for (let i = 1; i < arr.length; i++) {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1);
+  }
+  return arr.join("");
+}
+
+toCamelCase("the-stealth-warrior");
 // =======================================================================
 
 //  67  =======================================================================
