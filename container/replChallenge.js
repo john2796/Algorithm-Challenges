@@ -796,7 +796,7 @@ Write a function that takes an array of strings and return the longest string in
 
 */
 function longestString(arr) {
-  const longest = arr.reduce(function(a, b) {
+  const longest = arr.reduce(function (a, b) {
     return a.length >= b.length ? a : b;
   });
   //return_the_first_if_there_are_two_longest_strings
@@ -1165,8 +1165,21 @@ toCamelCase("the-stealth-warrior");
 // =======================================================================
 
 //  67  =======================================================================
-/*
+/* Write a function called "addToBackOfNew"
+Given an array and an element, "addToBackOfNew" returns a clone of the given array, with the given element added to the end.
+Important: It should be a NEW array instance, not the original array instance.
  */
+
+const input = [1, 2];
+function addToBackOfNew(arr, element) {
+  // return a clone of the given array, with the givent element added to the end.
+  arr = arr.concat(element);
+  return arr;
+}
+const output = addToBackOfNew(input, 3);
+console.log(input); // --> [1, 2]
+console.log(output); // --> [1, 2, 3]
+
 // =======================================================================
 
 //  68  =======================================================================
