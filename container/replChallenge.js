@@ -1183,8 +1183,18 @@ console.log(output); // --> [1, 2, 3]
 // =======================================================================
 
 //  68  =======================================================================
-/*
+/* Write a function called "getAllElementsButNth"
+Given an array and an index, "getAllElementButNth" returns an array with all the elements but the nth.
  */
+
+function getAllElementsButNth(array, n) {
+  array = array.splice(n, 1); // this removes the nth value & spits it out 
+  return array;  //  this returns the modified array 
+}
+
+
+var output = getAllElementsButNth(['a', 'b', 'c'], 1);
+console.log(output); // --> ['a', 'c']
 // =======================================================================
 
 //  69  =======================================================================
