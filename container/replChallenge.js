@@ -1198,8 +1198,22 @@ console.log(output); // --> ['a', 'c']
 // =======================================================================
 
 //  69  =======================================================================
-/*
+/* Write a function called "areValidCredential"
+Given a name and a password, "areValidCredentials", returns true if the name is longer than 3 And, thep password is at leat 8 characters long. Otherwise return false.
  */
+function areValidCredentials(name, password) {
+  // return true if the name is longer than 3 , AND the password is at least 8 char long.
+  if (name.length > 3 && password.length >= 8) {
+    return true;
+  } else {
+    return false;
+  }
+  // otherwise return false.
+
+}
+
+const output = areValidCredentials('Ritu', 'mylongpassword')
+console.log(output); // --> true
 // =======================================================================
 
 //  70  =======================================================================
