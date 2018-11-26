@@ -1242,7 +1242,34 @@ console.log(output); // --> 2
 // =======================================================================
 
 //  71  =======================================================================
-/*
+/* Lambda code challenges week 1 of Javascript 
+question 1
+const unimaginativeArray = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+  for (var i = 0; i < unimaginativeArray.length; i += 3) {
+     console.log(unimaginativeArray[i]);
+}
+
+question 2
+const nameArray = [ 'Jacquelynn', 'Csaba', 'Ellen', 'Moises', 'Cole', 'Jeff', 'Dre\'Sean' ];
+  console.log(nameArray[nameArray.length-1]);
+
+
+
+question 3
+const nameArray = [ 'Jacquelynn', 'Csaba', 'Ellen', 'Moises', 'Cole', 'Jeff', 'Dre\'Sean' ];
+console.log('\n********** Exercise 3 of 4 **********');
+const adjectiveArray = [ 'awesome', 'fantastic', 'amazing', 'wonderful', 'fabulous', 'incredible', 'marvelous' ];
+    for (i = 0; i < adjectiveArray.length; i++) {
+      console.log(nameArray[i]  +' is ' +adjectiveArray[i]);
+}
+
+
+question 4
+const unimaginativeArray = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+for (let i = 3; i < unimaginativeArray.length; i +=3) {
+  console.log(unimaginativeArray[i]);
+}
+
  */
 // =======================================================================
 
