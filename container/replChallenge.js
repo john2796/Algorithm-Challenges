@@ -1293,7 +1293,7 @@ function getMealsByMaxCalories(meals, maxCalories, dailyAllowance) {
   return meals.filter(meal => meal.calories <= maxCalories).map(meal => {
     return {
       name: meal.name,
-      calories: meal.calires,
+      calories: meal.calories,
       percentageOfDailyAllowance: meal.calories / dailyAllowance * 100
     }
   })
