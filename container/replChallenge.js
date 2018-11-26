@@ -1274,8 +1274,34 @@ for (let i = 3; i < unimaginativeArray.length; i +=3) {
 // =======================================================================
 
 //  72  =======================================================================
-/*
+/* Chaining methods Using .filter .map
  */
+// Chaining Methods .filter .map
+
+const meals = [
+  { type: 'breakfast', name: 'Full English', calories: 1500 },
+  { type: 'breakfast', name: 'Colacao', calories: 260 },
+  { type: 'breakfast', name: 'Croissant and jam', calories: 520 },
+  { type: 'breakfast', name: 'Granola with Greek yoghurt and blueberries', calories: 680 },
+  { type: 'brinner', name: 'Shepherds Pie with strawberry yoghurt', calories: 915 },
+  { type: 'brinner', name: 'Milky Porridge with beef and green beans', calories: 875 },
+  { type: 'dinner', name: 'Phad Thai', calories: 750 },
+  { type: 'dinner', name: 'Chicken Katsu curry and rice', calories: 830 },
+];
+
+function getMealsByMaxCalories(meals, maxCalories, dailyAllowance) {
+  return meals.filter(meal => meal.calories <= maxCalories).map(meal => {
+    return {
+      name: meal.name,
+      calories: meal.calires,
+      percentageOfDailyAllowance: meal.calories / dailyAllowance * 100
+    }
+  })
+}
+getMealsByMaxCalories(meals, 850, 2000);
+
+
+
 // =======================================================================
 
 //  73  =======================================================================
