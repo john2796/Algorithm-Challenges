@@ -1369,22 +1369,26 @@ Notes :
 * If there is no property at the key , it should return an empty array .
 
  */
+const obj = {
+  key: [],
+  keyTwo: [10, 12, 13, 14, 15]
+};
+
 function getElementsThatEqual10AtProperty(obj, key) {
-  var arr = [];
-  for (var prop in obj) {
-    for (var i = 0; i < obj[prop].length; i++) {
-      if (obj[prop][i] === 10) {
-        arr.push(obj[prop][i]);
-      }
+  let rtn = [];
+  //cycle through elements of the array at obj[key]:
+  for (let prop in obj[key]) {
+    //if an element is equal to 10:
+    if (obj[key][prop] === 10) {
+      //push to our rtn array:
+      rtn.push(obj[key][prop]);
     }
   }
-  return arr;
+  return rtn;
 }
-var obj = {
-  key: [1000, 10, 50, 10] //[10, 10]
-};
-var output = getElementsThatEqual10AtProperty(obj, 'key');
-console.log(output);
+
+const output = getElementsThatEqual10AtProperty(obj, 'key');
+console.log(output); // --> [10, 10]
 
 // =======================================================================
 
