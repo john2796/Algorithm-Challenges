@@ -1326,13 +1326,66 @@ console.log(output); // --> 3
 // =======================================================================
 
 //  75  =======================================================================
-/*
+/*Write a function called  " select". 
+Given an array and an object, "select" returns a new object whose properties in the given object And whose keys are present in the given array .
+Notes : 
+* If keys are present in the given array , but are not in the given object, it should ignore them. 
+* It does not modify the passed in object. 
  */
+const arr = ['a', 'c', 'e'];
+const obj = {
+  a: 1,
+  b: 2,
+  c: 3,
+  d: 4
+};
+function select(arr, obj) {
+  let newObj = {};
+  // if keys are present in array , but are not in the given object, it should ignore them. 
+  // it does not modify the passed in object
+  for (let i = 0; i < arr.length; i++) {
+    for (let key in obj) {
+      if (arr[i] === key) {
+        newObj[key] = obj[key]
+      }
+    }
+  }
+  // returns a new object whose properties are those in the given object 
+  // And whose keys are present in the given array
+  return newObj;
+}
+const output = select(arr, obj);
+console.log(output); // --> { a: 1, c: 3 }
 // =======================================================================
 
 //  76  =======================================================================
-/*
+/*Write a function called "getElementsThatEqual10AtProperty"
+ Given an object and a key, "getElementsThatEqual10AtProperty" returns an array containing all the elements all the elements of the array located at the given key that are equal to ten.
+
+Notes : 
+* If the array is empty , it should return an empty array . 
+* If the array contains no elements equal to 10, it should return an empty array. 
+* If the property at the given key is not an array, it should return an empty array. 
+* If there is no property at the key , it should return an empty array .
+
  */
+function getElementsThatEqual10AtProperty(obj, key) {
+  var arr = [];
+  for (var prop in obj) {
+    for (var i = 0; i < obj[prop].length; i++) {
+      if (obj[prop][i] === 10) {
+        arr.push(obj[prop][i]);
+      }
+    }
+  }
+  return arr;
+}
+var obj = {
+  key: [1000, 10, 50, 10] //[10, 10]
+};
+var output = getElementsThatEqual10AtProperty(obj, 'key');
+console.log(output);
+
 // =======================================================================
 
 //  77  =======================================================================
