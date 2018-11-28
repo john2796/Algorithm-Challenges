@@ -1305,13 +1305,24 @@ getMealsByMaxCalories(meals, 850, 2000);
 // =======================================================================
 
 //  73  =======================================================================
-/*
+/*Write a function called "findMinLengthOfThreeWords" return the length of the shortest word.
  */
+function findMinLengthOfThreeWords(word1, word2, word3) {
+  return Math.min(word1.length, word2.length, word3.length);
+}
+
+console.log(findMinLengthOfThreeWords('a', 'be', 'see'));
 // =======================================================================
 
 //  74  =======================================================================
-/*
+/*Write a function called "findMaxLengthOfThreeWords". returns the length of the longest word.
  */
+function findMaxLengthOfThreeWords(word1, word2, word3) {
+  // your code here
+  return Math.max(word1.length, word2.length, word3.length)
+}
+const output = findMaxLengthOfThreeWords('a', 'be', 'see');
+console.log(output); // --> 3
 // =======================================================================
 
 //  75  =======================================================================
