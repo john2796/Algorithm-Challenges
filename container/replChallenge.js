@@ -1506,8 +1506,33 @@ console.log("8.", pebbles.yabbaDabba());
 // =======================================================================
 
 //  79  =======================================================================
-/*
+/*Bubles Sort Challenge
  */
+// Bubble Sort
+const numbers = [12, 10, 15, 11, 14, 13, 16];
+
+function bubbleSort(array) {
+  let done = false;
+  while (!done) {
+    done = true;
+    for (let i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        let tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+
+  return array;
+}
+
+bubbleSort(numbers);
+console.log(numbers);
+
+
+
 // =======================================================================
 
 //  80  =======================================================================
