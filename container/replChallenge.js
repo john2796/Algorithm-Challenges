@@ -1538,6 +1538,36 @@ console.log(numbers);
 //  80  =======================================================================
 /*
  */
+const obj = {
+  key: [100, 20, 50, 500]
+};
+function getElementsLessThan100AtProperty(obj, key) {
+  // your code here
+  // const getLess100 = obj[key].filter(x => x <= 100);
+
+  // return getLess100;
+  if (Array.isArray(obj['key'])) {
+    //do something here
+    return obj[key].filter(x => x < 100);
+  }
+
+  return [];
+}
+
+const output = getElementsLessThan100AtProperty(obj, 'key');
+console.log(output); // --> [20, 50]
+
+
+// Write a function called "getElementsLessThan100AtProperty".
+
+// Given an object and a key, "getElementsLessThan100AtProperty" returns an array containing all the elements of the array located at the given key that are less than 100.
+
+// Notes:
+// x If the array is empty, it should return an empty array.
+// x If the array contains no elements less than 100, it should return an empty array.
+// * If the property at the given key is not an array, it should return an empty array.
+// * If there is no property at the key, it should return an empty array.
+
 // =======================================================================
 
 //  81  =======================================================================
