@@ -1588,7 +1588,7 @@ function countAllCharacters(str) {
     return {};
   }
   const count = {};
-  for (var i = 0; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (count[str[i]] === undefined) {
       count[str[i]] = 0;
     }
