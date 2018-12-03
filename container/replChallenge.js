@@ -1613,8 +1613,26 @@ console.log(output); // --> {b: 1, a: 3, n: 2}
 // =======================================================================
 
 //  82  =======================================================================
-/*
- */
+const obj = {
+  key: [1, 20, 30]
+};
+function getElementsGreaterThan10AtProperty(obj, key) {
+  if (obj[key] instanceof Array) {
+    return obj[key].filter(x => x > 10);
+  }
+  return [];
+}
+
+const output = getElementsGreaterThan10AtProperty(obj, 'key');
+console.log(output); // --> [20, 30]
+
+//returns an array containing the elements within the array, located at the given key, that are greater than 10.
+
+// Notes:
+// x If the array is empty, it should return an empty array.
+// x If the array contains no elements greater than 10, it should return an empty array.
+// x If the property at the given key is not an array, it should return an empty array.
+// * If there is no property at the key, it should return an empty array. 
 // =======================================================================
 
 //  83  =======================================================================
