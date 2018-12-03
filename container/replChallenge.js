@@ -1656,7 +1656,31 @@ console.log(output); // --> [1, 3, 1]
 
 //  84  =======================================================================
 /*
+Write a function called "getFirstElementOfProperty".
+
+Given an object and a key, "getFirstElementOfProperty" returns the first element of the array located at the given key. 
+
+Notes:
+* If the array is empty, it should return undefined.
+* If the property at the given key is not an array, it should return undefined.
+* If there is no property at the key, it should return undefined.
  */
+const obj = {
+  key: [1, 2, 4],
+  testing: [5, 2, 4],
+};
+
+function getFirstElementOfProperty(obj, key) {
+  if (!Array.isArray(obj[key])) {  // if object's key is not an array...
+    return undefined;  // satisfies Notes requirements
+  } else {
+    return obj[key][0];  // return first element of array in object's key
+  }
+}
+
+
+const output = getFirstElementOfProperty(obj, 'testing');
+console.log(output); // --> 1
 // =======================================================================
 
 //  85  =======================================================================
