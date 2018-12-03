@@ -1686,6 +1686,42 @@ console.log(output); // --> 1
 //  85  =======================================================================
 /*
  */
+class Stack {
+  constructor(props) {
+    this.storage = props.storage
+  }
+  numOfItems() {
+    let storage = this.storage;
+    if (storage.length === 0) {
+      return `There are no items in your Stack.`
+    } else {
+      return storage.length
+    }
+  }
+  remove() {
+    return `${this.storage.splice(-1)}`
+  }
+  add(item) {
+    return this.storage.push(item);
+  }
+
+}
+
+const myStack = new Stack({ storage: [] });
+
+console.log(myStack.numOfItems()); // <--- "There are no items in your Stack."
+myStack.add('first');
+myStack.add('second');
+myStack.add('third');
+console.log(myStack.numOfItems()); // <--- 3
+console.log(myStack.storage);      // <--- [ 'first', 'second', 'third' ]
+myStack.remove();
+console.log(myStack.storage);      // <--- [ 'first', 'second' ]
+myStack.remove();
+console.log(myStack.storage);      // <--- [ 'first' ]
+myStack.remove();
+console.log(myStack.storage);      // <--- []
+console.log(myStack.numOfItems()); // <--- "There are no items in your Stack."
 // =======================================================================
 
 //  86  =======================================================================
