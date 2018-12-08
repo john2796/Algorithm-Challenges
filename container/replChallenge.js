@@ -1686,6 +1686,7 @@ console.log(output); // --> 1
 //  85  =======================================================================
 /*
  */
+// Class constructor
 class Stack {
   constructor(props) {
     this.storage = props.storage
