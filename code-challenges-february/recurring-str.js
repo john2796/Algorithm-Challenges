@@ -24,3 +24,13 @@ function recurringChar(str) {
   return null;
 }
 recurringChar(input);
+
+//======== solution two ===============
+// function recurringStr(str) {
+//   let counts = {};
+
+//   for (let i in str) {
+//     counts[str[i]] = 1 + (counts[str[i]] || 0);
+//   }
+//   console.log(counts);
+// }
