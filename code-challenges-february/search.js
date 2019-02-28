@@ -27,3 +27,21 @@ Notes
 
 
 */
+function search(array, value) {
+  return binarySearch(array, value, 0);
+}
+
+function binarySearch(array, value, index) {
+  if (array.length === 1) {
+    return array[0] === value ? index : null;
+  } else if (array.length === 0) {
+    return null;
+  } else {
+    var newIndex = Math.ceil(array.length / 2);
+    return (
+      binarySearch(array.slice(0, newIndex), value, index + 0) ||
+      binarySearch(array.slice(newIndex), value, index + newIndex)
+    );
+  }
+}
+search([1, 3, 16, 22, 31, 33, 34], 34);
